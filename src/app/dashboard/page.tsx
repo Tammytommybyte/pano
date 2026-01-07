@@ -286,7 +286,7 @@ export default function DashboardPage() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-yellow-500 font-bold">⚠</span>
-              <span>La categoría "Extras" está generando pérdidas - revisar estrategia de precios</span>
+              <span>La categoría &quot;Extras&quot; está generando pérdidas - revisar estrategia de precios</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-500 font-bold">✓</span>
