@@ -256,4 +256,4 @@ Antes de hacer deploy a producción:
 - [ ] Repositorio en GitHub actualizado
 - [ ] Dominio configurado (opcional)
 
-**¡Listo para deploy! 🚀**
+**¡Listo para deploy! 🚀
