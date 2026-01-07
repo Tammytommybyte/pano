@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { SyncIndicator } from '@/components/sync-indicator'
 import { OfflineBanner } from '@/components/offline-banner'
 import { useOnlineStatus } from '@/hooks/use-online-status'
@@ -16,6 +17,40 @@ export default function Home() {
           <h1 className="text-4xl font-bold mb-2">Sistema Eureka</h1>
           <p className="text-gray-600">Gestión de Graduaciones con Capacidades Offline-First</p>
         </header>
+
+        {/* Navigation to Mockups */}
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-6 mb-6 text-white">
+          <h2 className="text-2xl font-semibold mb-4">🎨 Mockups del Sistema</h2>
+          <p className="mb-4 text-blue-100">Explora las interfaces principales del sistema</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link 
+              href="/catalog"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg p-4 transition-all hover:scale-105 border border-white/30"
+            >
+              <div className="text-3xl mb-2">🖼️</div>
+              <h3 className="font-semibold text-lg mb-1">Catálogo de Productos</h3>
+              <p className="text-sm text-blue-100">Gestión de imágenes y productos</p>
+            </Link>
+            
+            <Link 
+              href="/dashboard"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg p-4 transition-all hover:scale-105 border border-white/30"
+            >
+              <div className="text-3xl mb-2">📊</div>
+              <h3 className="font-semibold text-lg mb-1">Dashboard Interno</h3>
+              <p className="text-sm text-blue-100">Análisis de costos y rentabilidad</p>
+            </Link>
+            
+            <Link 
+              href="/warehouse"
+              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg p-4 transition-all hover:scale-105 border border-white/30"
+            >
+              <div className="text-3xl mb-2">📦</div>
+              <h3 className="font-semibold text-lg mb-1">Órdenes de Almacén</h3>
+              <p className="text-sm text-blue-100">Gestión de inventario y movimientos</p>
+            </Link>
+          </div>
+        </div>
 
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
           <div className="flex items-center justify-between mb-4">
