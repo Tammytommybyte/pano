@@ -43,7 +43,7 @@ Eureka System is a comprehensive graduation services management platform that au
 - Never use `any` type unless absolutely necessary
 
 ### 3. Database Schema
-The system uses a normalized MySQL database with the following main entities:
+The system uses a normalized MySQL database (3NF) with the following main entities:
 - `events`: Graduation events
 - `orders`: Customer orders
 - `products`: Product catalog
@@ -116,11 +116,14 @@ When implementing offline features:
 ### Security
 - Never commit sensitive data (API keys, passwords)
 - Use environment variables for configuration
-- Sanitize user inputs
-- Implement proper authentication checks
+- Sanitize user inputs to prevent XSS attacks
+- Validate all inputs with Zod schemas before processing
+- Implement proper authentication checks using NextAuth.js
+- Enforce role-based access control (RBAC)
 - Use HTTPS in production
-- Hash passwords with bcryptjs
-- Validate all inputs with Zod schemas
+- Hash passwords with bcryptjs (never store plain text)
+- Implement CSRF protection
+- Use secure session management
 
 ### Performance
 - Optimize images before upload
